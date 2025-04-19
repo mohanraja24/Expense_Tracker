@@ -1,0 +1,58 @@
+/* Container for both sidebar and main content */
+.home-container {
+  display: flex;
+  height: calc(100vh - 60px); /* Subtract navbar height */
+  margin-top: 60px; /* Offset for the navbar */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 200px;
+  background-color: #927777;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 87px; /* Same height as the navbar */
+  bottom: 0; /* Ensure it is above other content */
+  transition: all 0.3s ease;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  font-size: 1.2em;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 5px;
+}
+.sidebar li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #8fbd9a; /* Link color */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+.sidebar li a:hover {
+  color: #38b555; /* Change color on hover */
+}
+.sidebar li:hover {
+  background-color: #444;
+}
+
+/* Main content styling */
+.homepage {
+  flex: 1;
+  padding: 40px;
+  margin-left: 270px; /* Offset for the sidebar width */
+  font-size: 24px;
+  color: #333;
+}
